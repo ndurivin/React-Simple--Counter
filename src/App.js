@@ -18,6 +18,7 @@ function App() {
     <div className="App">
       <div className="container py-5">
         <h2>Simple Counter App</h2>
+        <p>Click buttons to Adjust</p>
         <div>
         <button className="btn btn-danger btn-sm m-2" onClick={decrease}>Subtract</button>
         <button className="btn btn-secondary btn-sm m-3" onClick={setZero}>Reset to Zero</button>
