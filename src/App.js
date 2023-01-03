@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [age, setAge] = useState(0);
+  const increaseAge = () => {
+    setAge(age + 1);
+  };
+  const decreaseAge = () => {
+    setAge(age - 1);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container py-5">
+        <h1>Simple Counter App</h1>
+        <button className="btn btn-danger" onClick={decreaseAge}>Subtract</button>
+        {age}
+        <button className="btn btn-success" onClick={increaseAge}>Add</button>
+      </div>
     </div>
   );
 }
